@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>pressionArts</title>
+	<script
+  		src="https://code.jquery.com/jquery-3.3.1.js"
+  		integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  		crossorigin="anonymous"></script>
+	<style>
+
+		a {
+			margin: 1%;
+			font-size: 10px;
+			color: cyan;
+		}
+
+		a:visited {
+			color: red;
+		}
+
+		#logo {
+			width: 100%
+		}
+
+		.artwork {
+			width: 50%
+			float: left
+		}
+
+	</style>
+</head>
+<body>
+	<div id='header' style='text-align: center;'>
+		<img src = 'pressionArts.png', alt = 'pressionImage' id="logo">
+	</div>
+	<div id='skins' style='text-align: center;'>
+		<button id='skins'>SKINS</button>
+	</div>
+	<div id='buttons' style='text-align: center;'>
+	</div>
+	<div id='console' style='text-align: center;'>
+	</div>
+	<script>
+
+		var skin = 0;
+
+		/////
+
+		//Setting up the category references
+
+			//ideally I would be able to sort through the existing files automatically and determine how many images are in each without any 
+			//extensive preparation, yet at this early stage I decided to use a linked list to make sure the application functioned as intended
+
+			//names of various folders
+		var categories = ['ActualInstruments', 'CommonBeauty', 'Ddd', 'Essence', 'ExperimentalPhotos', 'FertileCoasts', 'FeudalChambers', 
+						'JewelryWindow', 'LITHOgraphs', 'MoneyWalls', 'OfRunways', 'PrintedEditions', 'Shock', 'TextileCarpetRugs', 'Tower100', 'World'];
+
+			//linked list with number of images per folder updated before each commit
+		var tally = [36, 75, 84, 231, 33, 29, 45, 17, 19, 48, 20, 98, 16, 17, 65, 38];
+
+		/////
+
+		//Function that displays the image contents of the category that the user has chosen
+
+		function imageDisplay(name) {
+
+			//determining linked list position of the catgory
+			listCursor = categories.indexOf(name);
+			console.log(listCursor);
+			//determining the number of images associated with this category at position listCursor
+			numberOfImages = tally[listCursor];
+			console.log(numberOfImages);
+			//setting an image cursor that will iterate until the tally named numberOfImages
+			imageCursor = 1;
+
+			//clear out console elements every time a new category is chosen
+			$('#console').empty();
+
+			//appends each image in the chosen category to the console
+			while (imageCursor <= numberOfImages) {
+				$('#console').append('<div class="artwork"><img width="100%" src="foundARTs/' + name + '/' + imageCursor + '.jpg" alt="image ' + imageCursor +'"></div>');
+				//iteration to move forward the while loop
+				imageCursor += 1;
+			}
+		}
+		
+		//Creates buttons for users to select a category at a time
+		//Click listener to execute the imageDisplay function at the click of a specific category button
+		for (category in categories) {
+				$('#buttons').append('<div><a href=# class="category" id="' + categories[category] + '">' + categories[category] + '</a></div>');
+		}
+
+		$('a.category').click(function() {
+			var id = $(this).attr('id');
+			imageDisplay(id);
+		})
+
+		$('#skins').click(function() {
+			if (skin == 0) {
+				skin = 1;
+				$("body").css("background-color", "black");
+				$("button").css("color", "purple");
+			}
+			else if (skin == 1) {
+				skin = 2;
+				$("body").css("background-color", "#A5C9E5");
+			}
+			else if (skin == 2) {
+				skin = 3;
+				$("body").css("background-color", "#5A0000");
+			}
+			else {
+				skin = 0;
+				$("body").css("background-color", "white");
+				$("button").css("color", "black");
+			}
+		})
+
+	</script>
+</body>
+</html>

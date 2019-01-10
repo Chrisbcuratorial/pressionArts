@@ -20,12 +20,11 @@
 		}
 
 		#logo {
-			width: 100%
+			width: 100%;
 		}
 
 		.artwork {
-			width: 50%
-			float: left
+			margin-bottom: 4px;
 		}
 
 	</style>
@@ -71,17 +70,17 @@
 			//determining the number of images associated with this category at position listCursor
 			numberOfImages = tally[listCursor];
 			console.log(numberOfImages);
-			//setting an image cursor that will iterate until the tally named numberOfImages
-			imageCursor = 1;
+			//setting an image cursor that will iterate negatively until (and including) 1
+			imageCursor = numberOfImages;
 
 			//clear out console elements every time a new category is chosen
 			$('#console').empty();
 
 			//appends each image in the chosen category to the console
-			while (imageCursor <= numberOfImages) {
+			while (imageCursor >= 1) {
 				$('#console').append('<div class="artwork"><img width="100%" src="foundARTs/' + name + '/' + imageCursor + '.jpg" alt="image ' + imageCursor +'"></div>');
 				//iteration to move forward the while loop
-				imageCursor += 1;
+				imageCursor -= 1;
 			}
 		}
 		

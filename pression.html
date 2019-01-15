@@ -10,9 +10,14 @@
 	<style>
 
 		a {
-			margin: 1%;
+			width: 33.33%;
+			float: left;
 			font-size: 10px;
 			color: teal;
+		}
+
+		#skins {
+			margin-bottom: 4px;
 		}
 
 		a:visited {
@@ -38,6 +43,7 @@
 	</div>
 	<div id='buttons' style='text-align: center;'>
 	</div>
+	<p style='text-align: center; color: red;'>•••</p>
 	<div id='console' style='text-align: center;'>
 	</div>
 	<script>
@@ -52,11 +58,56 @@
 			//extensive preparation, yet at this early stage I decided to use a linked list to make sure the application functioned as intended
 
 			//names of various folders
-		var categories = ['ActualInstruments', 'CommonBeauty', 'Ddd', 'Essence', 'ExperimentalPhotos', 'FertileCoasts', 'FeudalChambers', 
-						'JewelryWindow', 'LITHOgraphs', 'MoneyWalls', 'OfRunways', 'PrintedEditions', 'Shock', 'TextileCarpetRugs', 'Tower100', 'World'];
+		var categories = ['ActualInstruments', 
+											//'CommonBeauty',
+										 	'Ddd', 
+											'Essence', 
+											'ExperimentalPhotos', 
+											'FertileCoasts', 
+											'FeudalChambers', 
+											'JewelryWindow', 
+											'LITHOgraphs', 
+											'MoneyWalls', 
+											'OfRunways', 
+											'PrintedEditions', 
+											'Shock', 
+											'TextileCarpetRugs', 
+											'Tower100', 
+											'World'];
+		
+		var phrases = ['The instrument itself as art', 
+									 '3-dimensional art', 
+									 'What was not chosen is important here', 
+									 'Photos with some extraneous value', 
+									 'Foundational urban art', 
+									 'Noble society, feudal society', 
+									 'Just admiring', 
+									 'Etchings, prints, lithographs', 
+									 'Posters, advertisements, frames', 
+									 'Art as fashion or fashion as art?', 
+									 'From books, newspapers & texts', 
+									 'This section is forbidden', 
+									 'Bazaar tents line the streets', 
+									 'Something special about these', 
+									 'Real art world art'];
 
 			//linked list with number of images per folder updated before each commit
-		var tally = [36, 75, 84, 231, 33, 29, 45, 17, 19, 48, 20, 98, 16, 17, 65, 38];
+		var tally = [36, 
+								//75,
+		 						84, 
+								231, 
+								33, 
+								29, 
+								45, 
+								17, 
+								19, 
+								48, 
+								20, 
+								98, 
+								16, 
+								17, 
+								65, 
+								38];
 
 		/////
 
@@ -71,16 +122,30 @@
 			numberOfImages = tally[listCursor];
 			console.log(numberOfImages);
 			//setting an image cursor that will iterate negatively until (and including) 1
-			imageCursor = numberOfImages;
+			NOIparallel = numberOfImages;
+
+			//Because images are iteratively named (and image hunting missions typically contain similar images), I built an array to randomly pull numbers from
+			//until it is depeleted.
+			randomizer = [];
+			while (NOIparallel > 0) {
+				randomizer.push(NOIparallel);
+				NOIparallel -= 1;
+			} 
 
 			//clear out console elements every time a new category is chosen
 			$('#console').empty();
 
-			//appends each image in the chosen category to the console
-			while (imageCursor >= 1) {
-				$('#console').append('<div class="artwork"><img width="100%" src="foundARTs/' + name + '/' + imageCursor + '.jpg" alt="image ' + imageCursor +'"></div>');
-				//iteration to move forward the while loop
-				imageCursor -= 1;
+			$("#console").append('<div style="width: 100%; text-align: center;">' + phrases[listCursor] + '</div>');
+
+			//appends each image in the chosen category to the console; exhausts randomizer array until there are no units left
+			while (randomizer.length > 0) {
+				imageCursor = randomizer[Math.round(randomizer.length*Math.random())];
+				randomizer.splice(randomizer.indexOf(imageCursor), 1);
+				console.log(randomizer);
+				//without this, there would always be 1 image that showed up as "image not defined" with a console error
+				if (imageCursor != undefined) {
+					$('#console').append('<div class="artwork"><img width="100%" src="foundARTs/' + name + '/' + imageCursor + '.jpg" alt="image ' + imageCursor +'"></div>');
+				}
 			}
 		}
 		
@@ -99,20 +164,14 @@
 			if (skin == 0) {
 				skin = 1;
 				$("body").css("background-color", "black");
-				$("button").css("color", "purple");
-			}
-			else if (skin == 1) {
-				skin = 2;
-				$("body").css("background-color", "#A5C9E5");
-			}
-			else if (skin == 2) {
-				skin = 3;
-				$("body").css("background-color", "#5A0000");
+				$("button").css("color", "blue");
+				$("#console").css("color", "white");
 			}
 			else {
 				skin = 0;
 				$("body").css("background-color", "white");
-				$("button").css("color", "black");
+				$("button").css("color", "maroon");
+				$("#console").css("color", "black");
 			}
 		})
 

@@ -1,0 +1,32 @@
+
+a {
+  width: 33.33%;
+  float: left;
+  font-size: 12px;
+  color: lavender;
+  margin-bottom: 3.33%;
+}
+
+#skins {
+}
+
+#phrase {
+  margin-bottom: 6%;
+}
+
+a:visited {
+  color: mediumslateblue;
+}
+
+#logo {
+  width: 100%;
+}
+
+.artwork {
+  margin-bottom: 4px;
+}
+
+button {
+  padding: 2%;
+  margin: 2%;
+}

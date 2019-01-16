@@ -3,196 +3,33 @@
 <head>
 	<title>pressionARTs</title>
 	<link rel="icon" type="image/jpg" href="pressionFavIcon.jpg">
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<script
   		src="https://code.jquery.com/jquery-3.3.1.js"
   		integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  		crossorigin="anonymous"></script>
-	<style>
-
-		a {
-			width: 33.33%;
-			float: left;
-			font-size: 10px;
-			color: teal;
-		}
-
-		#skins {
-			margin-bottom: 4px;
-		}
-
-		a:visited {
-			color: red;
-		}
-
-		#logo {
-			width: 100%;
-		}
-
-		.artwork {
-			margin-bottom: 4px;
-		}
-
-	</style>
+			crossorigin="anonymous"></script>
 </head>
 <body>
+
 	<div id='header' style='text-align: center;'>
 		<img src = 'pressionArts.png', alt = 'pressionImage' id="logo">
 	</div>
+
 	<div id='skins' style='text-align: center;'>
-		<button id='skins'>SKINS</button>
+		<button id='skins'>S k i n s</button>
 	</div>
+
+	<p style='text-align: center; color: skyblue;'>•••</p>
+
 	<div id='buttons' style='text-align: center;'>
 	</div>
+
 	<p style='text-align: center; color: red;'>•••</p>
+
 	<div id='console' style='text-align: center;'>
 	</div>
-	<script>
 
-		var skin = 0;
-
-		/////
-
-		//Setting up the category references
-
-			//ideally I would be able to sort through the existing files automatically and determine how many images are in each without any 
-			//extensive preparation, yet at this early stage I decided to use a linked list to make sure the application functioned as intended
-
-			//names of various folders
-		var categories = ['ActualInstruments', 
-											//'CommonBeauty',
-										 	'Ddd', 
-											'Essence', 
-											'ExperimentalPhotos', 
-											'FertileCoasts', 
-											'FeudalChambers', 
-											'JewelryWindow', 
-											'LITHOgraphs', 
-											'MoneyWalls', 
-											'OfRunways', 
-											'PrintedEditions', 
-											'Shock', 
-											'TextileCarpetRugs', 
-											'Tower100', 
-											'World'];
-		
-		var phrases = ['The instrument itself as art', 
-									 //'Friendly reminder that she was never the one',
-									 '3-dimensional art', 
-									 'What was not chosen is important here', 
-									 'Photos with some extraneous value', 
-									 'Foundational urban art', 
-									 'Noble society, feudal society', 
-									 'Just admiring', 
-									 'Etchings, prints, lithographs', 
-									 'Posters, advertisements, frames', 
-									 'Art as fashion or fashion as art?', 
-									 'From books, newspapers & texts', 
-									 'This section is forbidden', 
-									 'Bazaar tents line the streets', 
-									 'Something special about these', 
-									 'Real art world art'];
-
-			//linked list with number of images per folder updated before each commit
-		var tally = [
-								//ActualInstruments
-								36, 
-								//CommonBeauty
-								////75,
-								//Ddd
-		 						86, 
-								//Essence
-								233, 
-								//ExperimentalPhotos
-								33, 
-								//FertileCoasts
-								29, 
-								//FeudalChambers
-								47, 
-								//JewelryWindow
-								17, 
-								//LITHOgraphs
-								20, 
-								//MoneyWalls
-								48, 
-								//OfRunways
-								18, 
-								//PrintedEditions
-								104, 
-								//Shock
-								18, 
-								//TextileCarpetRugs
-								17, 
-								//Tower100
-								67, 
-								//World
-								40];
-
-		/////
-
-		//Function that displays the image contents of the category that the user has chosen
-
-		function imageDisplay(name) {
-
-			//determining linked list position of the catgory
-			listCursor = categories.indexOf(name);
-			console.log(listCursor);
-			//determining the number of images associated with this category at position listCursor
-			numberOfImages = tally[listCursor];
-			console.log(numberOfImages);
-			//setting an image cursor that will iterate negatively until (and including) 1
-			NOIparallel = numberOfImages;
-
-			//Because images are iteratively named (and image hunting missions typically contain similar images), I built an array to randomly pull numbers from
-			//until it is depeleted.
-			randomizer = [];
-			while (NOIparallel > 0) {
-				randomizer.push(NOIparallel);
-				NOIparallel -= 1;
-			} 
-
-			//clear out console elements every time a new category is chosen
-			$('#console').empty();
-
-			$("#console").append('<div style="width: 100%; text-align: center;">' + phrases[listCursor] + '</div>');
-
-			//appends each image in the chosen category to the console; exhausts randomizer array until there are no units left
-			while (randomizer.length > 0) {
-				imageCursor = randomizer[Math.round(randomizer.length*Math.random())];
-				randomizer.splice(randomizer.indexOf(imageCursor), 1);
-				console.log(randomizer);
-				//without this, there would always be 1 image that showed up as "image not defined" with a console error
-				if (imageCursor != undefined) {
-					$('#console').append('<div class="artwork"><img width="100%" src="foundARTs/' + name + '/' + imageCursor + '.jpg" alt="image ' + imageCursor +'"></div>');
-				}
-			}
-		}
-		
-		//Creates buttons for users to select a category at a time
-		//Click listener to execute the imageDisplay function at the click of a specific category button
-		for (category in categories) {
-				$('#buttons').append('<div><a href=# class="category" id="' + categories[category] + '">' + categories[category] + '</a></div>');
-		}
-
-		$('a.category').click(function() {
-			var id = $(this).attr('id');
-			imageDisplay(id);
-		})
-
-		$('#skins').click(function() {
-			if (skin == 0) {
-				skin = 1;
-				$("body").css("background-color", "black");
-				$("button").css("color", "turquoise");
-				$("#console").css("color", "white");
-			}
-			else {
-				skin = 0;
-				$("body").css("background-color", "white");
-				$("button").css("color", "navy");
-				$("#console").css("color", "black");
-			}
-		})
-
-	</script>
+	<script type="text/javascript" src="script.js"></script>
+	
 </body>
 </html>

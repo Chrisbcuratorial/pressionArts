@@ -26,9 +26,9 @@ var categories = ['ActualInstruments',
                   'World'];
 
 var phrases = ['The instrument itself as art', 
-                //'You are not the one',
+                //'You aint the one',
                 '3-dimensional art', 
-                'Opression > impression > expression',
+                'Oppression > impression > expression',
                 'Foundational urban art', 
                 'Noble society, feudal society', 
                 'Just admiring', 
@@ -134,13 +134,15 @@ $('#skins').click(function() {
     $("body").css("background-color", "black");
     $("button").css("color", "white");
     $("button").css("background-color", "black");
-    $("#console").css("color", "white");
+    $("a").css("color", "whitesmoke");
+    $("#console").css("color", "whitesmoke");
   }
   else {
     skin = 0;
     $("body").css("background-color", "white");
-    $("button").css("color", "black");
-    $("button").css("background-color", "white");
+    $("button").css("color", "whitesmoke");
+    $("button").css("background-color", "black");
+    $("a").css("color", "black");
     $("#console").css("color", "black");
   }
 })

@@ -1,9 +1,12 @@
+body {
+  background-color: white;
+}
 
 a {
   width: 33.33%;
   float: left;
   font-size: 12px;
-  color: lavender;
+  color: black;
   margin-bottom: 3.33%;
 }
 
@@ -11,11 +14,11 @@ a {
 }
 
 #phrase {
-  margin-bottom: 6%;
+  margin-bottom: 20px;
 }
 
 a:visited {
-  color: mediumslateblue;
+  color: black;
 }
 
 #logo {
@@ -29,4 +32,5 @@ a:visited {
 button {
   padding: 2%;
   margin: 2%;
+  color: whitesmoke;
 }

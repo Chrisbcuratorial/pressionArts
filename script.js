@@ -8,74 +8,56 @@ var skin = 0;
   //extensive preparation, yet at this early stage I decided to use a linked list to make sure the application functioned as intended
 
   //names of various folders
-var categories = ['ActualInstruments', 
-                  //'CommonBeauty',
+var categories = ['CasualSoSpecial',
+                  'CremonaPoValley', 
                   'Ddd', 
-                  'Essence', 
-                  'FertileCoasts', 
-                  'FeudalChambers', 
-                  'JewelryWindow', 
+                  'Essence',
+                  'FeudalChambers',
+                  'InternalResponse', 
+                  'LaPistaDelPueblo', 
                   'LITHOgraphs', 
-                  'MoneyWalls', 
-                  'OfRunways', 
+                  'MainDragJeweler',
                   'PrintedEditions', 
-                  'Shock', 
-                  'SpecialPhotos', 
-                  'TextileCarpetRugs', 
+                  'PublicMessages', 
+                  'SecretPlaces', 
+                  'TextileAsymmetry', 
                   'Tower100', 
-                  'World'];
+                  'VillesCoastal'];
 
-var phrases = ['The instrument itself as art', 
-                //'You aint the one',
-                '3-dimensional art', 
-                'Oppression > impression > expression',
-                'Foundational urban art', 
+var phrases = ['The most casual view is the rarest',
+                'The instrument itself as art',
+                '3-dimensional artistic works', 
+                'After oppression and repression, impression then expression',
                 'Noble society, feudal society', 
-                'Just admiring', 
-                'Etchings, prints, lithographs', 
-                'Posters, advertisements, frames', 
-                'Art as fashion and/or fashion as art', 
-                'From books, newspapers & texts', 
                 'This section is forbidden', 
-                'Photos with some added value', 
+                'Each and every land as my runway',
+                'Etchings, prints, lithographs', 
+                'Just admiring', 
+                'With or subsequent to text', 
+                'From cultures I had no clue existed',
+                'Meant for display in some public place', 
                 'Bazaar tents line the streets', 
-                'Something special about these', 
-                'Real art world art'];
+                'Something special about these',
+                'Foundational urban cultural hubs'];
 
   //linked list with number of images per folder updated before each commit
 var tally = [
-            //ActualInstruments
-            36, 
-            //CommonBeauty
-            ////75,
-            //Ddd
-            86, 
-            //Essence
-            240, 
-            //FertileCoasts
-            29, 
-            //FeudalChambers
-            47, 
-            //JewelryWindow
-            17, 
-            //LITHOgraphs
-            20, 
-            //MoneyWalls
-            55, 
-            //OfRunways
-            18, 
-            //PrintedEditions
-            108, 
-            //Shock
-            18, 
-            //SpecialPhotos
-            36, 
-            //TextileCarpetRugs
-            17, 
-            //Tower100
-            72, 
-            //World
-            41];
+            64,
+            36,
+            112,
+            277,
+            74,
+            20,
+            98,
+            23,
+            21,
+            169,
+            80,
+            55,
+            35,
+            115,
+            33
+            ];
 
 /////
 
@@ -131,18 +113,41 @@ $('a.category').click(function() {
 $('#skins').click(function() {
   if (skin == 0) {
     skin = 1;
-    $("body").css("background-color", "black");
+    $("body").css("background-image", "url(blackscape.png)");
+    $("body").css("background-size", "cover");
     $("button").css("color", "white");
     $("button").css("background-color", "black");
     $("a").css("color", "whitesmoke");
+    $("p").css("color", "whitesmoke");
     $("#console").css("color", "whitesmoke");
   }
-  else {
-    skin = 0;
-    $("body").css("background-color", "white");
+
+  else if (skin == 1) {
+    skin = 2;
+    $("body").css("background-image", "url(redscape.png)");
+    $("body").css("background-size", "cover");
+  }
+
+  else if (skin == 2) {
+    skin = 3;
+    $("body").css("background-image", "url(indigoscape.png)");
+    $("body").css("background-size", "cover");
+  }
+
+  else if (skin == 3) {
+    skin = 4;
+    $("body").css("background-image", "url(whitescape.png)");
+    $("body").css("background-size", "cover");
     $("button").css("color", "whitesmoke");
     $("button").css("background-color", "black");
     $("a").css("color", "black");
+    $("p").css("color", "black");
     $("#console").css("color", "black");
   }
+  else {
+    skin = 0;
+    $("body").css("background-image", "url(silverscape.png)");
+    $("body").css("background-size", "cover");
+  }
+  
 })

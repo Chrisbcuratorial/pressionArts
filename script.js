@@ -8,56 +8,21 @@ var skin = 0;
   //extensive preparation, yet at this early stage I decided to use a linked list to make sure the application functioned as intended
 
   //names of various folders
-var categories = ['CasualSoSpecial',
-                  'CremonaPoValley', 
-                  'Ddd', 
-                  'Essence',
-                  'FeudalChambers',
-                  'InternalResponse', 
-                  'LaPistaDelPueblo', 
-                  'LITHOgraphs', 
-                  'MainDragJeweler',
-                  'PrintedEditions', 
-                  'PublicMessages', 
-                  'SecretPlaces', 
-                  'TextileAsymmetry', 
-                  'Tower100', 
-                  'VillesCoastal'];
+var categories = ['Asymmetry', 'CremonaITL', 'Ddd', 
+                  'Essence', 'FertilePlains', 'ƒ(Products)', 'IterationsOfRoark', 'ImaginaryThings', 
+                  'JewelryWindow', 'LaPistaDelPueblo', 'LITHOgraphs', 
+                  'MoneyWalls', 'NobleCommissions', 'OpposingNature', 
+                  'PrintedEditions', 'RetroDigital', 'Shock', 
+                  'Tower100', 'Unreplicable', 'World', '漫画'];
 
-var phrases = ['The most casual view is the rarest',
-                'The instrument itself as art',
-                '3-dimensional artistic works', 
-                'After oppression and repression, impression then expression',
-                'Noble society, feudal society', 
-                'This section is forbidden', 
-                'Each and every land as my runway',
-                'Etchings, prints, lithographs', 
-                'Just admiring', 
-                'With or subsequent to text', 
-                'From cultures I had no clue existed',
-                'Meant for display in some public place', 
-                'Bazaar tents line the streets', 
-                'Something special about these',
-                'Foundational urban cultural hubs'];
+var phrases = ['Bazaar tents line the crowded streets', 'The Brothers Amati and the echoes of Lombardy', 'Width, height, depth', 
+'Oppressions, impressions, expressions', 'Historical foundations of urban art', 'under construction. . .', 'under construction. . .', 'Assorted experiments in playing god', 'Just admiring', 'Found details of lived-in styles', 
+'Limestone plates with sprinkled rosin', 'Ubiquitous messages to direct profitable attention', 'Of chambers from various feudal societies', 'Proof that nature is unoriginal, you are not the one, and art is made in opposition to nature',
+'Bound pages, lettering, posters, sleeves, motifs', 'Virtual atoms as carefully arranged colorful squares', 'Each piece here is meant to induce some internal response', 'Something special about this collection',
+'Casual photographs of powerful persons and one-off events', 'Cultural desensitization and why the center of the world is the world itself', 'Whimsical pictures'];
 
   //linked list with number of images per folder updated before each commit
-var tally = [
-            64,
-            36,
-            112,
-            277,
-            74,
-            20,
-            98,
-            23,
-            21,
-            169,
-            80,
-            55,
-            35,
-            115,
-            33
-            ];
+var tally = [55, 33, 132, 302, 33, 0, 0, 20, 22, 158, 36, 85, 78, 77, 243, 135, 22, 138, 79, 62, 57];
 
 /////
 

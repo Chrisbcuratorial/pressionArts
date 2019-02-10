@@ -19,7 +19,7 @@ var phrases = ['Bazaar tents line the crowded streets', 'The Brothers Amati and 
 'Oppressions, impressions, expressions', 'Historical foundations of urban art', 'under construction. . .', 'under construction. . .', 'World building as art', 'Just admiring', 'Found details of lived-in styles', 
 'Limestone plates with sprinkled rosin', 'Ubiquitous messages to direct profitable attention', 'Of chambers from various feudal societies', 'under construction. . .',
 'Bound pages, lettering, posters, sleeves, motifs', 'Virtual atoms as carefully arranged colorful squares', 'Each piece here is meant to induce some internal response', 'Something special about this collection',
-'Casual photographs of powerful persons and one-off events', 'Cultural desensitization and why the center of the world is the world itself', 'Whimsical pictures'];
+'Casual photographs of powerful persons and one-off events', 'Cultural desensitization', 'Whimsical pictures'];
 
   //linked list with number of images per folder updated before each commit
 var tally = [55, 33, 132, 302, 33, 0, 0, 20, 22, 158, 36, 85, 78, 77, 243, 135, 22, 138, 79, 62, 57];

@@ -16,8 +16,8 @@ var categories = ['Asymmetry', 'CremonaITL', 'Ddd',
                   'Tower100', 'Unreplicable', 'World', '漫画'];
 
 var phrases = ['Bazaar tents line the crowded streets', 'The Brothers Amati and the echoes of Lombardy', 'Width, height, depth', 
-'Oppressions, impressions, expressions', 'Historical foundations of urban art', 'under construction. . .', 'under construction. . .', 'Assorted experiments in playing god', 'Just admiring', 'Found details of lived-in styles', 
-'Limestone plates with sprinkled rosin', 'Ubiquitous messages to direct profitable attention', 'Of chambers from various feudal societies', 'Proof that nature is unoriginal, you are not the one, and art is made in opposition to nature',
+'Oppressions, impressions, expressions', 'Historical foundations of urban art', 'under construction. . .', 'under construction. . .', 'World building as art', 'Just admiring', 'Found details of lived-in styles', 
+'Limestone plates with sprinkled rosin', 'Ubiquitous messages to direct profitable attention', 'Of chambers from various feudal societies', 'under construction. . .',
 'Bound pages, lettering, posters, sleeves, motifs', 'Virtual atoms as carefully arranged colorful squares', 'Each piece here is meant to induce some internal response', 'Something special about this collection',
 'Casual photographs of powerful persons and one-off events', 'Cultural desensitization and why the center of the world is the world itself', 'Whimsical pictures'];
 

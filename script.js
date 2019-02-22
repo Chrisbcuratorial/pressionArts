@@ -9,20 +9,20 @@ var skin = 0;
 
   //names of various folders
 var categories = ['Asymmetry', 'CremonaITL', 'Ddd', 
-                  'Essence', 'FertilePlains', 'ƒ(Products)', 'IterationsOfRoark', 'ImaginaryThings', 
+                  'Essence', 'FertilePlains', 'ImaginaryThings', 
                   'JewelryWindow', 'LaPistaDelPueblo', 'LITHOgraphs', 
-                  'MoneyWalls', 'NobleCommissions', 'OpposingNature', 
-                  'PrintedEditions', 'RetroDigital', 'Shock', 
+                  'MoneyWalls', 'NobleCommissions', 
+                  'PrintedEditions', 'RetroDigital', 'Shocking', 
                   'Tower100', 'Unreplicable', 'World', '漫画'];
 
-var phrases = ['Bazaar tents line the crowded streets', 'The Brothers Amati and the echoes of Lombardy', 'Width, height, depth', 
-'Oppressions, impressions, expressions', 'Historical foundations of urban art', 'under construction. . .', 'under construction. . .', 'World building as art', 'Just admiring', 'Found details of lived-in styles', 
-'Limestone plates with sprinkled rosin', 'Ubiquitous messages to direct profitable attention', 'Of chambers from various feudal societies', 'under construction. . .',
-'Bound pages, lettering, posters, sleeves, motifs', 'Virtual atoms as carefully arranged colorful squares', 'Each piece here is meant to induce some internal response', 'Something special about this collection',
-'Casual photographs of powerful persons and one-off events', 'Cultural desensitization', 'Whimsical pictures'];
+var phrases = ['Bazaar tents line weekend streets', 'The Brothers Amati', 'Width, height, depth', 
+'Oppressions, impressions, expressions', 'Historical urban', 'World building as art', 'Just admiring', 'Found details of lived-in styles', 
+'Rosin-sprinkled limestone plates', 'Messages to communities','Feudal chambers',
+'On pages, with text or near it', 'Color squares as atoms', 'King of shock', 'Something special about these',
+'Casual limited access', 'Cultural desensitization', 'Whimsical pictures'];
 
   //linked list with number of images per folder updated before each commit
-var tally = [55, 33, 132, 302, 33, 0, 0, 20, 22, 158, 36, 85, 78, 77, 243, 135, 22, 138, 79, 62, 57];
+var tally = [55, 31, 139, 317, 36, 20, 22, 177, 54, 25, 78, 292, 139, 22, 141, 92, 68, 61];
 
 /////
 
@@ -78,41 +78,25 @@ $('a.category').click(function() {
 $('#skins').click(function() {
   if (skin == 0) {
     skin = 1;
-    $("body").css("background-image", "url(blackscape.png)");
-    $("body").css("background-size", "cover");
-    $("button").css("color", "white");
-    $("button").css("background-color", "black");
-    $("a").css("color", "whitesmoke");
-    $("p").css("color", "whitesmoke");
-    $("#console").css("color", "whitesmoke");
-  }
-
-  else if (skin == 1) {
-    skin = 2;
+    $("#logo").attr("src", "pressionArtsr.png")
     $("body").css("background-image", "url(redscape.png)");
     $("body").css("background-size", "cover");
-  }
-
-  else if (skin == 2) {
-    skin = 3;
-    $("body").css("background-image", "url(indigoscape.png)");
-    $("body").css("background-size", "cover");
-  }
-
-  else if (skin == 3) {
-    skin = 4;
-    $("body").css("background-image", "url(whitescape.png)");
-    $("body").css("background-size", "cover");
-    $("button").css("color", "whitesmoke");
-    $("button").css("background-color", "black");
+    $("button").css("color", "black");
+    $("button").css("background-color", "white");
     $("a").css("color", "black");
     $("p").css("color", "black");
     $("#console").css("color", "black");
   }
   else {
     skin = 0;
-    $("body").css("background-image", "url(silverscape.png)");
+    $("#logo").attr("src", "pressionArts.png")
+    $("body").css("background-image", "url(indigoscape.png)");
     $("body").css("background-size", "cover");
+    $("button").css("color", "white");
+    $("button").css("background-color", "black");
+    $("a").css("color", "whitesmoke");
+    $("p").css("color", "whitesmoke");
+    $("#console").css("color", "whitesmoke");
   }
   
 })

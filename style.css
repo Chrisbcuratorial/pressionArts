@@ -6,7 +6,7 @@ a {
   width: 33.33%;
   float: left;
   font-size: 12px;
-  color: black;
+  color: whitesmoke;
   margin-bottom: 3.33%;
 }
 
@@ -18,7 +18,7 @@ a {
 }
 
 a:visited {
-  color: black;
+  color: whitesmoke;
 }
 
 #logo {

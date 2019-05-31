@@ -4,25 +4,44 @@ var skin = 0;
 
 //Setting up the category references
 
-  //ideally I would be able to sort through the existing files automatically and determine how many images are in each without any 
+  //ideally I would be able to sort through the existing files automatically and determine how many images are in each without any
   //extensive preparation, yet at this early stage I decided to use a linked list to make sure the application functioned as intended
 
   //names of various folders
-var categories = ['Asymmetry', 'CremonaITL', 'Ddd', 
-                  'Essence', 'FertilePlains', 'ImaginaryThings', 
-                  'JewelryWindow', 'LaPistaDelPueblo', 'LITHOgraphs', 
-                  'MoneyWalls', 'NobleCommissions', 
-                  'PrintedEditions', 'RetroDigital', 'Shocking', 
-                  'Tower100', 'Unreplicable', 'World', '漫画'];
+var categories = ['Asymmetry',
+                  'CremonaEchoes',
+                  'Ddd',
+                  'Essential',
+                  'FertilePlains'
+                  'JewelryWindow',
+                  'LITHOgraphs',
+                  'NobleCommissions',
+                  'PrintedEditions',
+                  'RareImages',
+                  'Shocking',
+                  'Tower100',
+                  'VirtualRunway',
+                  'World',
+                  '漫画'];
 
-var phrases = ['Bazaar tents line weekend streets', 'The Brothers Amati', 'Width, height, depth', 
-'Oppressions, impressions, expressions', 'Historical urban', 'World building as art', 'Just admiring', 'Found details of lived-in styles', 
-'Rosin-sprinkled limestone plates', 'Messages to communities','Feudal chambers',
-'On pages, with text or near it', 'Color squares as atoms', 'King of shock', 'Something special about these',
-'Casual limited access', 'Cultural desensitization', 'Whimsical pictures'];
+var phrases = ['Bazaar tents line weekend streets',
+               'The Brothers Amati and their impact',
+               'Width + height + depth',
+               'Thesis: oppression, impression, expression',
+               'Foundational urban art',
+               'Just admiring',
+               'Rosin-sprinkled limestone plates',
+               'Chambers of physical receipts',
+               'On pages, with text or near it',
+               'Casual photos are the rarest',
+               'Your reaction as the art',
+               'Minimal yet special for it',
+               'Found details in local styles',
+               'Cultural desensitization',
+               'Whimsical pictures'];
 
   //linked list with number of images per folder updated before each commit
-var tally = [55, 31, 139, 317, 36, 20, 22, 177, 54, 25, 78, 292, 139, 22, 141, 92, 68, 61];
+var tally = [53, 31, 159, 350, 44, 28, 56, 89, 326, 90, 42, 164, 201, 85, 74];
 
 /////
 
@@ -45,7 +64,7 @@ function imageDisplay(name) {
   while (NOIparallel > 0) {
     randomizer.push(NOIparallel);
     NOIparallel -= 1;
-  } 
+  }
 
   //clear out console elements every time a new category is chosen
   $('#console').empty();
@@ -98,5 +117,5 @@ $('#skins').click(function() {
     $("p").css("color", "whitesmoke");
     $("#console").css("color", "whitesmoke");
   }
-  
+
 })

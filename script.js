@@ -12,7 +12,7 @@ var categories = ['Asymmetry',
                   'CremonaEchoes',
                   'Ddd',
                   'Essential',
-                  'FertilePlains'
+                  'FertilePlains',
                   'JewelryWindow',
                   'LITHOgraphs',
                   'NobleCommissions',

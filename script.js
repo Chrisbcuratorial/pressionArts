@@ -41,7 +41,7 @@ var phrases = ['Bazaar tents line weekend streets',
                'Whimsical pictures'];
 
   //linked list with number of images per folder updated before each commit
-var tally = [53, 31, 159, 350, 44, 28, 56, 89, 326, 90, 42, 164, 201, 85, 74];
+var tally = [53, 31, 172, 382, 45, 29, 66, 93, 362, 91, 47, 190, 207, 92, 75];
 
 /////
 
@@ -106,9 +106,20 @@ $('#skins').click(function() {
     $("p").css("color", "black");
     $("#console").css("color", "black");
   }
+  else if (skin == 1) {
+    skin = 2;
+    $("#logo").attr("src", "pressionArts.png");
+    $("body").css("background-image", "url(wavescape.png)");
+    $("body").css("background-size", "cover");
+    $("button").css("color", "whitesmoke");
+    $("button").css("background-color", "black");
+    $("a").css("color", "black");
+    $("p").css("color", "black");
+    $("#console").css("color", "black");
+  }
   else {
     skin = 0;
-    $("#logo").attr("src", "pressionArts.png")
+    $("#logo").attr("src", "pressionArts.png");
     $("body").css("background-image", "url(indigoscape.png)");
     $("body").css("background-size", "cover");
     $("button").css("color", "white");

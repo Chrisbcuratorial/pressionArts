@@ -1,4 +1,4 @@
-var skin = 0;
+var skin = 2;
 
 /////
 
@@ -41,7 +41,7 @@ var phrases = ['Bazaar tents line weekend streets',
                'Whimsical pictures'];
 
   //linked list with number of images per folder updated before each commit
-var tally = [53, 31, 172, 382, 45, 29, 66, 93, 362, 91, 47, 190, 207, 92, 75];
+var tally = [86, 41, 198, 404, 51, 33, 76, 121, 428, 94, 58, 221, 225, 122, 78];
 
 /////
 

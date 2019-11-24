@@ -100,8 +100,8 @@ $('#skins').click(function() {
     $("#logo").attr("src", "pressionArtsr.png")
     $("body").css("background-image", "url(redscape.png)");
     $("body").css("background-size", "cover");
-    $("button").css("color", "black");
-    $("button").css("background-color", "white");
+    $("button").css("color", "white");
+    $("button").css("background-color", "black");
     $("a").css("color", "black");
     $("p").css("color", "black");
     $("#console").css("color", "black");
@@ -122,8 +122,8 @@ $('#skins').click(function() {
     $("#logo").attr("src", "pressionArts.png");
     $("body").css("background-image", "url(indigoscape.png)");
     $("body").css("background-size", "cover");
-    $("button").css("color", "white");
-    $("button").css("background-color", "black");
+    $("button").css("color", "black");
+    $("button").css("background-color", "white");
     $("a").css("color", "whitesmoke");
     $("p").css("color", "whitesmoke");
     $("#console").css("color", "whitesmoke");

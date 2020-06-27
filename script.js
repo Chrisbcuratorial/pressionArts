@@ -1,4 +1,4 @@
-var skin = 2;
+var skin = 0;
 
 /////
 
@@ -9,39 +9,39 @@ var skin = 2;
 
   //names of various folders
 var categories = ['Asymmetry',
-                  'CremonaEchoes',
                   'Ddd',
-                  'Essential',
+                  'Essence',
                   'FertilePlains',
-                  'JewelryWindow',
                   'LITHOgraphs',
                   'NobleCommissions',
                   'PrintedEditions',
                   'RareImages',
-                  'Shocking',
+                  'Shiny',
+                  'TheBrothersAmati',
                   'Tower100',
                   'VirtualRunway',
+                  'Weirdo',
                   'World',
                   '漫画'];
 
 var phrases = ['Bazaar tents line weekend streets',
-               'The Brothers Amati and their impact',
                'Width + height + depth',
                'Thesis: oppression, impression, expression',
                'Foundational urban art',
-               'Just admiring',
                'Rosin-sprinkled limestone plates',
                'Chambers of physical receipts',
                'On pages, with text or near it',
-               'Casual photos are the rarest',
-               'Your reaction as the art',
+               'Casual photos of special people and things',
+               'Window shopping, just admiring',
+               'Cremona echoes',
                'Minimal yet special for it',
-               'Found details in local styles',
+               'Found details in internet style',
+               'Your reaction as the art',
                'Cultural desensitization',
                'Whimsical pictures'];
 
   //linked list with number of images per folder updated before each commit
-var tally = [86, 41, 198, 404, 51, 33, 76, 121, 428, 94, 58, 221, 225, 122, 78];
+var tally = [85, 212, 449, 51, 81, 153, 479, 107, 42, 41, 260, 313, 70, 138, 84];
 
 /////
 
@@ -117,13 +117,35 @@ $('#skins').click(function() {
     $("p").css("color", "black");
     $("#console").css("color", "black");
   }
+  else if (skin == 2) {
+    skin = 3;
+    $("#logo").attr("src", "pressionArts.png");
+    $("body").css("background-image", "url(purpscape.png)");
+    $("body").css("background-size", "cover");
+    $("button").css("color", "whitesmoke");
+    $("button").css("background-color", "black");
+    $("a").css("color", "black");
+    $("p").css("color", "black");
+    $("#console").css("color", "black");
+  }
+  else if (skin == 3) {
+    skin = 4;
+    $("#logo").attr("src", "pressionArtsr.png");
+    $("body").css("background-image", "url(koiscape.png)");
+    $("body").css("background-size", "cover");
+    $("button").css("color", "whitesmoke");
+    $("button").css("background-color", "black");
+    $("a").css("color", "whitesmoke");
+    $("p").css("color", "whitesmoke");
+    $("#console").css("color", "whitesmoke");
+  }
   else {
     skin = 0;
     $("#logo").attr("src", "pressionArts.png");
     $("body").css("background-image", "url(indigoscape.png)");
     $("body").css("background-size", "cover");
-    $("button").css("color", "black");
-    $("button").css("background-color", "white");
+    $("button").css("color", "whitesmoke");
+    $("button").css("background-color", "black");
     $("a").css("color", "whitesmoke");
     $("p").css("color", "whitesmoke");
     $("#console").css("color", "whitesmoke");

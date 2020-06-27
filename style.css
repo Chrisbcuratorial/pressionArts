@@ -6,19 +6,17 @@ a {
   width: 33.33%;
   float: left;
   font-size: 13px;
-  color: black;
+  color: whitesmoke;
   margin-bottom: 3.33%;
 }
+
+
 
 #skins {
 }
 
 #phrase {
   margin-bottom: 20px;
-}
-
-a:visited {
-  color: whitesmoke;
 }
 
 #logo {
